@@ -1,0 +1,11 @@
+<div>Logo created by <a href="https://www.designevo.com/" title="Free Online Logo Maker">DesignEvo logo maker</a></div>
+
+
+GitHub Token: 
+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
+
+npm install react-bootstrap bootstrap
+npm i react-google-button
+npm i react-router-dom
+
+
