@@ -47,7 +47,7 @@ const NavBar = () => {
             navbarScroll
           >
             <Nav.Link href="/alannews">News Page</Nav.Link>
-            <Nav.Link href="#action2">Bitcoin Page</Nav.Link>
+            <Nav.Link href="/bitcoindata">Bitcoin Page</Nav.Link>
           </Nav>
 
           <Button

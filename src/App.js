@@ -4,7 +4,8 @@ import AlanNews from './AlanNews'
 import GetStarted from './components/LandingPage/Getstarted'
 import Login from './components/LandingPage/Login'
 import Signup from './components/LandingPage/Signup'
-import { auth } from './firebase'
+import BitcoinPage from './components/Bitcoin/BitcoinPage'
+// import { auth } from './firebase'
 
 const App = () => {
   // const [user, setUser] = useState('')
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/alannews" element={<AlanNews />} />
+        <Route path="/bitcoindata" element={<BitcoinPage />} />
       </Routes>
     </BrowserRouter>
   )

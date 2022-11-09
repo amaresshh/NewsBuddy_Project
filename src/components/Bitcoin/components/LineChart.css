@@ -1,0 +1,35 @@
+.linechart {
+  padding: 8px;
+}
+.linechart_path {
+  stroke-width: 3;
+  fill: none;
+}
+
+.linechart_axis {
+  stroke: #bdc3c7;
+}
+
+.linechart_point {
+  fill: #fff;
+  stroke-width: 4;
+}
+
+.linechart_area {
+  padding: 5px;
+  fill: #84dc66;
+  stroke: none;
+  opacity: .35;
+}
+/*For red days #ff4c4c*/
+
+.linechart_label {
+ padding: 5px;
+ fill: #292b29;
+ font-weight: 600;
+}
+
+.hoverLine {
+  stroke: #7D95B6;
+  stroke-width: 1;
+}
