@@ -44,6 +44,6 @@ export default makeStyles(() => ({
     marginTop: 'auto',
   },
   label: {
-    color: 'grey',
+    color: '#00ABB3',
   },
 }))

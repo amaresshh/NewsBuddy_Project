@@ -10,6 +10,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Alert, AlertTitle } from '@mui/material'
 import { auth } from '../../firebase'
 import Snackbar from '@mui/material/Snackbar'
+import './stylelogin.css'
 
 const Login = () => {
   const classes = useStyles()
@@ -52,21 +53,21 @@ const Login = () => {
   return (
     <>
       <div className={classes.container}>
-        <div className="animate__animated animate__flipInX">
-          <section className={classes.section}>
+        <div className="animate__animated animate__flipInX login-box">
+          <section className={classes.section + " " + 'section_media'}>
             <div className={classes.leftSide}>
               <div className={classes.imgSection}>
-                <img
+                <img                  
                   src={loginImg}
                   className={classes.image}
                   alt="Login Image"
                 />
               </div>
             </div>
-            <div className={classes.rightSide}>
+            <div className={classes.rightSide  + " " + 'rs-media'}>
               <h3
                 style={{ textAlign: 'center', color: '#2192FF' }}
-                className="animate__animated animate__pulse animate__infinite	"
+                className="animate__animated animate__pulse animate__infinite login_responsive"
               >
                 Login Page
               </h3>
@@ -76,7 +77,7 @@ const Login = () => {
                   <Form.Label className={classes.label}>
                     Email address
                   </Form.Label>
-                  <Form.Control
+                  <Form.Control className='media-tb'
                     type="email"
                     placeholder="Enter email"
                     onChange={(e) => setEmail(e.target.value)}
@@ -85,7 +86,7 @@ const Login = () => {
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label className={classes.label}>Password</Form.Label>
-                  <Form.Control
+                  <Form.Control className='media-tb'
                     type="password"
                     placeholder="Password"
                     onChange={(e) => setPassword(e.target.value)}
@@ -100,7 +101,7 @@ const Login = () => {
                     Given Input field has — <strong>Blank Spaces!</strong>
                   </Alert>
                 )}
-                <div className="d-grid gap-4">
+                <div className="d-grid gap-4 media-login-btn">
                   <Button
                     className="mt-3 mb-3"
                     variant="primary"
@@ -110,7 +111,7 @@ const Login = () => {
                     Login Now
                   </Button>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'end' }}>
+                <div style={{ display: 'flex', justifyContent: 'end' }} class="dont-have-account">
                   <p style={{ color: 'gray' }}>Don't have an account? &nbsp;</p>
                   <nav>
                     <Link to="/signup">Sign up</Link>{' '}

@@ -2,11 +2,12 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
-// import Button from 'react-bootstrap/Button'
+// import NavbarLogo from '../../Images/navBarLogo.png'
 import { Button } from 'react-bootstrap'
 import { auth } from '../../firebase'
 import { useNavigate } from 'react-router-dom'
-import Banner from '../LandingPage/Banner'
+import NewsLogo from '../../Images/NewsLogo.png'
+// import Banner from '../LandingPage/Banner'
 
 const NavBar = () => {
   const navigate = useNavigate()
@@ -24,33 +25,33 @@ const NavBar = () => {
     >
       <Container fluid>
         <Navbar.Brand
-          href="/banner"
-          style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center' }}
+          href="/"
+          style={{
+            fontWeight: 'bold',
+            display: 'flex',
+            alignItems: 'center',
+            fontSize: '25px',
+          }}
         >
-          <lord-icon
-            src="https://cdn.lordicon.com/pqxdilfs.json"
-            trigger="boomerang"
-            style={{
-              width: '60px',
-              height: '60px',
-              // margin: '0px !important',
-              // padding: '0px !important',
-            }}
-          ></lord-icon>
+          <img
+            src={NewsLogo}
+            alt="logo"
+            style={{ height: '50px', width: '50px', margin: '5px' }}
+          />
           NewsBuddy
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0 "
-            style={{ maxHeight: '100px', fontSize: '15px' }}
+            style={{ maxHeight: '100px', fontSize: '20px' }}
             navbarScroll
           >
             <Nav.Link href="/alannews" className="pl-3">
               News Page
             </Nav.Link>
             <Nav.Link href="/bitcoindata">Bitcoin Page</Nav.Link>
-            <Nav.Link href="/aboutus">About Page</Nav.Link>
+            <Nav.Link href="/contact">Contact Us</Nav.Link>
           </Nav>
 
           <Button

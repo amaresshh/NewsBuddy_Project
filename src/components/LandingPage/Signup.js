@@ -58,18 +58,23 @@ const Signup = () => {
     <>
       <div className={classes.container}>
         <div className="animate__animated animate__flipInX">
-          <section className={classes.section}>
-            <div className={classes.rightSide}>
+          <section className={classes.section + ' ' + 'signup_media'}>
+            <div className={classes.rightSide + ' ' + 'right_side'}>
               <h3
                 style={{ textAlign: 'center', color: '#00ABB3' }}
-                className="animate__animated animate__pulse animate__infinite	"
+                className="animate__animated animate__pulse animate__infinite	signup_label"
               >
                 Sign-Up Page !
               </h3>
               <hr />
               <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-2" controlId="formBasicEmail">
-                  <Form.Label>Email address</Form.Label>
+                <Form.Group
+                  className="mb-2 signup_tf"
+                  controlId="formBasicEmail"
+                >
+                  <Form.Label className={classes.label}>
+                    Email address
+                  </Form.Label>
                   <Form.Control
                     type="email"
                     placeholder="Enter email"
@@ -80,8 +85,11 @@ const Signup = () => {
                   </Form.Text>
                 </Form.Group>
 
-                <Form.Group className="mb-2" controlId="formBasicPassword">
-                  <Form.Label>Password</Form.Label>
+                <Form.Group
+                  className="mb-2 signup_tf"
+                  controlId="formBasicPassword"
+                >
+                  <Form.Label className={classes.label}>Password</Form.Label>
                   <Form.Control
                     type="password"
                     placeholder="Password"
@@ -89,8 +97,13 @@ const Signup = () => {
                   />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                  <Form.Label>Confirm Password</Form.Label>
+                <Form.Group
+                  className="mb-3 signup_tf"
+                  controlId="formBasicPassword"
+                >
+                  <Form.Label className={classes.label}>
+                    Confirm Password
+                  </Form.Label>
                   <Form.Control
                     type="password"
                     placeholder="Confirm Password"
@@ -121,7 +134,7 @@ const Signup = () => {
 
                 <div className="d-grid gap-4">
                   <Button
-                    className="mt-3 mb-3"
+                    className="mt-3 mb-3 signup_tf"
                     variant="success"
                     type="submit"
                     disabled={!validateForm()}
@@ -129,7 +142,10 @@ const Signup = () => {
                     Sign-Up Now
                   </Button>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'end' }}>
+                <div
+                  style={{ display: 'flex', justifyContent: 'center' }}
+                  class="login_link"
+                >
                   <p style={{ color: 'gray' }}>
                     Already have an account? &nbsp;
                   </p>

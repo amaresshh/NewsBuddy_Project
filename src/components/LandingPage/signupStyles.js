@@ -40,4 +40,7 @@ export default makeStyles(() => ({
     height: '300px',
     marginTop: 'auto',
   },
+  label: {
+    color: '#00ABB3',
+  },
 }))

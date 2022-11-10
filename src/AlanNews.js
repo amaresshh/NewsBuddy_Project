@@ -3,10 +3,9 @@ import alanBtn from '@alan-ai/alan-sdk-web'
 import NewsCards from './components/NewsCards/NewsCards'
 // import classNames from 'classnames'
 import useStyles from './styles.js'
-import researchImg from './Images/Logo/logo.jpg'
+import NewsLogo from './Images/NewsLogo.png'
 import wordsToNumbers from 'words-to-numbers'
 import NavBar from './components/LandingPage/NavBar'
-// import { Alert } from '@mui/material'
 
 const alanKey =
   'c4db81d3452c51abf7f3b28e2026db8c2e956eca572e1d8b807a3e2338fdd0dc/stage'
@@ -50,7 +49,10 @@ const AlanNews = () => {
     <div className={classes.container}>
       <NavBar />
       <div className={classes.logoContainer}>
-        <img src={researchImg} className={classes.alanLogo} alt="Logo Image" />
+        <div className={classes.box}>
+          <img src={NewsLogo} className={classes.newsLogo} alt="Logo Image" />
+          <p className={classes.text}>Search Latest News !</p>
+        </div>
       </div>
       <NewsCards articles={newsArticles} activeArticle={activeArticle} />
     </div>

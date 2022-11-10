@@ -10,7 +10,7 @@ const getstarted = () => {
         <Link to="/signup">Signup Page</Link> <br />
         <Link to="/alannews">News Page</Link> <br />
         <Link to="/bitcoindata">Bitcoin Page</Link> <br />
-        <Link to="/aboutus">About Page</Link>
+        {/* <Link to="/aboutus">About Page</Link> */}
       </nav>
     </div>
   )

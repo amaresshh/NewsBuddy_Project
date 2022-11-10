@@ -1,0 +1,54 @@
+
+  @media(max-width:360px){
+    .login_responsive{
+        font-size: 20px;
+        text-align: left;
+        margin-right: 24rem;
+    }
+   
+    .media-tb{
+        width: 45%;
+    }
+    .media-login-btn{
+        /* background-color: black; */
+        width: 45%;
+    }
+
+    .dont-have-account{
+        font-size: 12px;
+        justify-content: start !important;
+    }
+    
+    .section_media{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rs-media{
+        margin-left: 12rem;
+
+    }
+
+    .signup_media{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right_side{
+        margin-left: 12rem;
+    }
+
+    .signup_label{
+        margin-left: -22rem;
+        font-size: 20px;
+    }
+
+    .signup_tf{
+        width: 45%;
+    }
+
+    .login_link{
+        justify-content: start !important;
+    }
+}
+  

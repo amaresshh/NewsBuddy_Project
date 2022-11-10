@@ -13,7 +13,7 @@ const Banner = () => {
   const [text, setText] = useState('')
   const [delta, setDelta] = useState(300 - Math.random() * 100)
   const [index, setIndex] = useState(1)
-  const toRotate = ['Web Developer', 'Web Designer', 'UI/UX Designer']
+  const toRotate = ['NewsBuddy']
   const period = 2000
   const navigate = useNavigate()
 
@@ -41,14 +41,14 @@ const Banner = () => {
     }
 
     if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true)
+      // setIsDeleting(true)
       setIndex((prevIndex) => prevIndex - 1)
       setDelta(period)
     } else if (isDeleting && updatedText === '') {
-      setIsDeleting(false)
+      // setIsDeleting(false)
       setLoopNum(loopNum + 1)
       setIndex(1)
-      setDelta(500)
+      setDelta(100)
     } else {
       setIndex((prevIndex) => prevIndex + 1)
     }
@@ -56,7 +56,7 @@ const Banner = () => {
 
   return (
     <section className="banner" id="home">
-      <Container>
+      <Container className="banner-container">
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
@@ -67,25 +67,28 @@ const Banner = () => {
                   }
                 >
                   <span className="tagline">Welcome to NewsBuddy</span>
-                  <h1>
-                    {`Hi! I'm Judy`}{' '}
+                  <h1 style={{ color: 'white', margin: '20px' }}>
+                    {`Hi! I'm `}
+                    {` `}
                     <span
                       className="txt-rotate"
-                      dataPeriod="100"
-                      data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
+                      data-period="200"
+                      data-rotate='[ "NewsBuddy"]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                  <p className="quote">
+                    <blockquote>
+                      "You can learn new things at any time in your life if
+                      you're willing to be a beginner. If you actually learn to
+                      like being a beginner, the whole world opens up to you"{' '}
+                      <br />
+                      &mdash; <cite>Barbara Shur</cite>{' '}
+                    </blockquote>
                   </p>
-                  <button onClick={() => navigate('/login')}>
-                    Let’s Connect <ArrowRightCircle size={25} />
+                  <button className="btn" onClick={() => navigate('/login')}>
+                    Let’s Get Started <ArrowRightCircle size={25} />
                   </button>
                 </div>
               )}
