@@ -9,7 +9,8 @@ const getstarted = () => {
         <Link to="/login">Login Page</Link> <br />
         <Link to="/signup">Signup Page</Link> <br />
         <Link to="/alannews">News Page</Link> <br />
-        <Link to="/bitcoindata">Bitcoin Page</Link>
+        <Link to="/bitcoindata">Bitcoin Page</Link> <br />
+        <Link to="/aboutus">About Page</Link>
       </nav>
     </div>
   )

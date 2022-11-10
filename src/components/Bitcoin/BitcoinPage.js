@@ -2,6 +2,7 @@ import alanButton from '@alan-ai/alan-sdk-web'
 import React, { useState, useEffect } from 'react'
 import moment from 'moment'
 import './bitcoinStyle.css'
+import NavBar from '../LandingPage/NavBar'
 
 import { unstable_batchedUpdates } from 'react-dom'
 
@@ -27,7 +28,6 @@ const BitcoinPage = () => {
         if (command === 'pricePeriod') {
           processData(url)
         }
-        // window.location.reload()
       },
     })
   }, [])
@@ -40,10 +40,14 @@ const BitcoinPage = () => {
       })
     })
   }
+
   const processData = (url) => {
+    console.log('Here: ')
+    console.log(url)
     fetch(url)
       .then((r) => r.json())
       .then((bitcoinData) => {
+        console.log(bitcoinData)
         const sortedData = []
         let count = 0
         for (let date in bitcoinData.bpi) {
@@ -69,36 +73,41 @@ const BitcoinPage = () => {
   }
 
   return (
-    <div className="container">
-      <div className="row">
-        <h1>Bitcoin Price Chart</h1>
-      </div>
-      <div className="row">
-        {!dataValues.fetchingData ? <InfoBox data={dataValues.data} /> : null}
-      </div>
-      <div className="row">
-        <div className="popup">
-          {dataValues.hoverLoc ? (
-            <Placeholder
-              hoverLoc={dataValues.hoverLoc}
-              activePoint={dataValues.activePoint}
-            />
-          ) : null}
+    <div>
+      <NavBar />
+      <div className="container">
+        <div className="row">
+          <div className="title">
+            <h1>Bitcoin Price Chart</h1>
+          </div>
         </div>
-      </div>
-      <div className="row">
-        <div className="chart">
-          {!dataValues.fetchingData ? (
-            <LineChart
-              data={dataValues.data}
-              // onChartHover={(a, b) => console.log(a + ' , ' + b)}
-              onChartHover={(a, b) => setValues(a, b)}
-            />
-          ) : null}
+        <div className="row">
+          {!dataValues.fetchingData ? <InfoBox data={dataValues.data} /> : null}
         </div>
-      </div>
-      <div className="row">
-        <div id="coindesk"> Powered by Coindesk</div>
+        <div className="row">
+          <div className="popup">
+            {dataValues.hoverLoc ? (
+              <Placeholder
+                hoverLoc={dataValues.hoverLoc}
+                activePoint={dataValues.activePoint}
+              />
+            ) : null}
+          </div>
+        </div>
+        <div className="row">
+          <div className="chart">
+            {!dataValues.fetchingData ? (
+              <LineChart
+                data={dataValues.data}
+                // onChartHover={(a, b) => console.log(a + ' , ' + b)}
+                onChartHover={(a, b) => setValues(a, b)}
+              />
+            ) : null}
+          </div>
+        </div>
+        <div className="row">
+          <div id="coindesk"> Powered by Coindesk</div>
+        </div>
       </div>
     </div>
   )

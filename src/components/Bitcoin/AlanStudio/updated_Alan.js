@@ -1,6 +1,9 @@
 // {Name: Bitcoin Price chart}
 // {Description: Gives Bitcoin price information, including visual charts of Bitcoin prices over the past week, month, and year.}
 
+// Command:
+// What is the bitcoin Price (in Rubles/ Euros / dollars)
+// What is the bitcoin Price over the last (month / year)
 title('Bitcoin')
 
 const DATE_FORMAT = 'YYYY-MM-DD'

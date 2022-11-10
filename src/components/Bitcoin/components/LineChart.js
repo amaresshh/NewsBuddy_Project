@@ -139,12 +139,15 @@ const LineChart = (props) => {
           textAnchor="start"
         >
           {profileState.data[0].d}
+          {/* {console.log(profileState.data[0].d)} */}
+          {/* {console.log(profileState.data[1].d)} */}
         </text>
         <text
           transform={`translate(${svgWidth}, ${svgHeight})`}
           textAnchor="end"
         >
           {profileState.data[profileState.data.length - 1].d}
+          {/* {console.log(profileState.data[profileState.data.length - 1].d)} */}
         </text>
       </g>
     )
@@ -166,6 +169,7 @@ const LineChart = (props) => {
         d: point.d,
         p: point.p,
       })
+      // console.log(i)
     })
 
     let closestPoint = {}

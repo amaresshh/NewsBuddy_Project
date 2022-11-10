@@ -4,12 +4,13 @@ export default makeStyles(() => ({
   container: {
     // backgroundColor: '#81C6E8',
     backgroundColor: '#00ABB3',
-    height: '100%',
-    width: '100%',
+    minHeight: '100vh',
+    minWidth: '100vw',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     fontWeight: '400',
+    overflowX: 'hidden',
   },
   section: {
     backgroundColor: 'white',

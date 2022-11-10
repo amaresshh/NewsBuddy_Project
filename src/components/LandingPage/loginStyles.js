@@ -1,14 +1,19 @@
 import { makeStyles } from '@mui/styles'
+import './mediaQuery.css'
 
 export default makeStyles(() => ({
   container: {
     backgroundColor: '#81C6E8',
-    height: '100%',
-    width: '100%',
+    // backgroundColor: 'yellow',
+    minHeight: '100vh',
+    minWidth: '100vw',
+    margin: 0,
+    padding: 0,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     fontWeight: '400',
+    overflowX: 'hidden',
   },
   section: {
     backgroundColor: 'white',
@@ -37,5 +42,8 @@ export default makeStyles(() => ({
   image: {
     height: '300px',
     marginTop: 'auto',
+  },
+  label: {
+    color: 'grey',
   },
 }))

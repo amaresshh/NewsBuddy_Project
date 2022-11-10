@@ -8,4 +8,179 @@ npm install react-bootstrap bootstrap
 npm i react-google-button
 npm i react-router-dom
 
+echo "# dummy" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/amaresshh/dummy.git
+git push -u origin main
 
+
+<div id="about-us">
+         <div class="top-box">
+            <div class="title  wow bounceInDown">
+                    <h1 class="normal">About us</h1>
+            </div>
+        </div>
+        
+        <div id="home">
+            <div class="bg-image">
+                    <img src="about-us-main.svg" alt="" />
+            </div>
+            <div class="main-image-overlay">
+                <div class="about-us-cover">
+                    <h6 class="about-us-title">Alan AI</h6>
+                    <p class="about-us-subtitle">Voice Controlled news application</p>
+                </div>
+            </div>
+    
+            <div class="hook-line lead">
+                <h2><span>Smart </span>things, <span>Smart </span>Future </h2>
+            </div>
+            <div class="sections">
+                <div class="box wow fadeInLeft">
+                    <h4 class="m-heading">News</h4>
+                    <p class="lead">News with respect to Time, Category, Terms & Source</p>
+                    <div class="divide"></div>
+                    <p>Now user can get news by just asking for the type of news they want!</p>
+                    <input type="submit" value="view news" class="btn bold m-t-2">
+                </div>
+    
+                <div class="image wow fadeInRight">
+                    <img src="news-images.webp" alt="" />
+                </div>
+            </div>
+    
+            <div class="sections">
+                <div class="image wow fadeInLeft">
+                    <img src="chat-with-bot.jpg" alt="" />
+                </div>
+                <div class="box wow fadeInRight">
+                    <h4 class="m-heading">Chat Bot</h4>
+                    <p class="lead">Small Talk with the app</p>
+                    <div class="divide"></div>
+                    <p>Have a small talk with the app by asking random questions, for example "What is this app for?"</p>
+                </div>
+            </div>
+    
+            <div class="sections">
+                <div class="box wow fadeInLeft">
+                    <h4 class="m-heading">Bitcoin</h4>
+                    <p class="lead">Bitcoin information with the graph</p>
+                    <div class="divide"></div>
+                    <p>Bitcoin information is provided along with the status of bitcoin rates with the help of graph.</p>
+                </div>
+                <div class="image wow fadeInRight">
+                    <img src="bitcoin.jpg" alt="" />
+                </div>
+            </div>
+    
+            <div class="sections">
+                <div class="image wow fadeInLeft">
+                    <img src="weather-info.jpg" alt="" />
+                </div>
+                <div class="box wow fadeInRight">
+                    <h4 class="m-heading">Weather</h4>
+                    <p class="lead">Weather information through Alan AI</p>
+                    <div class="divide"></div>
+                    <p>You can just ask for the weather information and the Alan AI will provide you the actual weather information.</p>
+                </div>
+            </div>
+    
+            <div class="sections">
+                <div class="box wow fadeInLeft">
+                    <h4 class="m-heading">Calculator</h4>
+                    <p class="lead">Use for the calculations</p>
+                    <div class="divide"></div>
+                    <p>Now you can calculate through our app while working on bitcoin investments. You can simply ask for the calcultaions and the alan AI will provide the answer</p>
+                </div>
+                <div class="image wow fadeInRight">
+                    <img src="calculator.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+            
+        </div>
+    </div>
+</div>
+
+<div id="contact">
+    <h3 class="contact-header">get in <span class="text-primary">touch </span>with us</h3>
+        <div class="map-class">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30152.630390655573!2d72.91429337165769!3d19.14802772096998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b87a44f8447b%3A0xa699c98b692d3c18!2sBhandup%20West%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1667912011076!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+
+        </div>
+        
+<div class="form-section">
+    <div class="container">
+                
+        <div class="details  wow zoomIn">    
+            <div class="form">
+              <h2>Send us an Email</h2>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="name">
+                </div>
+                
+                 <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="email">
+                </div>
+                
+                 <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" class="phone">
+                </div>
+                
+                  <div class="form-group subjects">
+                    <label for="subject">Subject</label>
+                    <input type="text" class="subject-tf">
+                </div>
+                
+                <div class="form-group">
+                    <label>Services</label>
+                        <select class="select">
+                                <option>--Select One--</option>
+                                <option>Solar Panels</option>
+                                <option>LED Indoor Lights</option>
+                                <option>LED Outdoor Lights</option>
+                                <option>LED Commercial Lights</option>
+                        </select>
+                </div>
+                
+                <div class="form-group text-area">
+                    <label>Messages</label>
+                       <textarea cols="50" rows="5" class="ta"></textarea>    
+                </div>
+                
+                 <div class="form-group">
+                       <input type="submit" value="Send Message" class="bg-primary">  
+                </div>
+            </div>
+            
+            <div class="address">
+                <div class="contact-us-img">
+                    <img src="contact-us-img.webp" alt="" width="24rem" height="30rem">
+                </div>
+            </div>
+</div>
+</div>
+    <div id="footer">
+        <div class="footer-image bg-white">
+            <img src="footer.png" alt="" />
+        </div>
+        <div class="footer-content bg-dark">
+            <nav class="items  wow fadeInUp">
+                <div class="logo copy-right">
+                    <img src="logo.png" alt="" height="80px">
+                    <div>
+                        <p class="m-0">Copyrights &copy; 2019 All Rights Reserved by Revour.</p>
+                    </div>
+                </div>
+                <ul class="list m-t-2">
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>

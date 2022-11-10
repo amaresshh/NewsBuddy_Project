@@ -18,18 +18,19 @@
 .linechart_area {
   padding: 5px;
   fill: #84dc66;
+  /* fill: #b9e0ff; */
   stroke: none;
-  opacity: .35;
+  opacity: 0.35;
 }
 /*For red days #ff4c4c*/
 
 .linechart_label {
- padding: 5px;
- fill: #292b29;
- font-weight: 600;
+  margin-right: 1em;
+  fill: #9cff2e;
+  font-weight: 600;
 }
 
 .hoverLine {
-  stroke: #7D95B6;
+  stroke: #7d95b6;
   stroke-width: 1;
 }

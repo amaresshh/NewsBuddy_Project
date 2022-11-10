@@ -3,8 +3,11 @@ import { makeStyles } from '@mui/styles'
 export default makeStyles((theme) => ({
   container: {
     backgroundColor: '#CDF0EA',
-    // backgroundColor:'',
-    height: '100%',
+    // backgroundColor: 'red',
+    minHeight: '100vh',
+    marginBottom: '20px',
+    backgroundRepeat: 'repeat-x',
+    paddingBottom: '40px',
   },
   logoContainer: {
     padding: '0 5%',
