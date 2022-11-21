@@ -235,8 +235,8 @@ const LineChart = (props) => {
         {makePath()}
         {makeArea()}
         {makeLabels()}
-        {pointData.hoverLoc ? createLine() : null}
-        {pointData.hoverLoc ? makeActivePoint() : null}
+        {/* {pointData.hoverLoc ? createLine() : null} */}
+        {/* {pointData.hoverLoc ? makeActivePoint() : null} */}
       </g>
     </svg>
   )

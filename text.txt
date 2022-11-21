@@ -184,3 +184,74 @@ git push -u origin main
             </nav>
         </div>
     </div>
+
+
+
+const assert = require('assert')
+const FIREBASE = require('@firebase/rules-unit-testing')
+const MY_PROJECT_ID = 'newsapp-3e1cb'
+import { doc } from 'firebase/firebase-firestore'
+
+/* import {
+  assertFails,
+  assertSucceeds,
+  initializeTestEnvironment,
+  RulesTestEnvironment,
+} from '@firebase/rules-unit-testing' */
+// import 'firebase/compat/firestore'
+
+// import 'firebase/compat/auth'
+// import { db } from './firebase'
+
+/* describe('Test Case 1: ', () => {
+  it('Testing NewsApi', async () => {
+    const api = () => {
+      return fetch(
+        'https://newsapi.org/v2/top-headlines?apiKey=3d823e00f2104fedacf71e9e98e7b5fa&country=in',
+      ).then((response) => {
+        return response.json()
+      })
+    }
+
+    const data = await api()
+    console.log(await data.articles[4].author)
+    expect(data.articles[4].author).toEqual('CricTracker Staff')
+  })
+})
+ */
+describe('Test Case 2: ', () => {
+  it('Testing Bitcoin API', async () => {
+    // let startDate = prompt('Enter Start Date (YYYY-MM-DD)')
+    // console.log(startDate)
+    const startDate = '2020-10-08'
+    const endDate = '2021-10-08'
+    const bitcoinApi = () => {
+      return fetch(
+        ` https://api.coindesk.com/v1/bpi/historical/close.json?currency=USD&start=${startDate}&end=${endDate}`,
+      ).then((response) => {
+        return response.json()
+      })
+    }
+
+    // console.log(await bitcoinApi())
+    const data = await bitcoinApi()
+    const totalDays = Object.keys(data.bpi).length
+    expect(totalDays).toEqual(366)
+  })
+})
+/* 
+describe('Test Case 3:', () => {
+  it('Can write to a user document with the same ID as our user: ', async () => {
+    const myAuth = { uid: 'user_abc', email: 'abc@gmail.com' }
+    const db = FIREBASE.initializeTestEnvironment({
+      projectId: MY_PROJECT_ID,
+      auth: myAuth,
+    })
+    // const data=
+    const testDoc = firebase.firestore
+      .collection('contact-data')
+      .doc('user_abc')
+    await FIREBASE.assertSucceeds(testDoc.set({ firstName: 'user1' }))
+  })
+})
+ */

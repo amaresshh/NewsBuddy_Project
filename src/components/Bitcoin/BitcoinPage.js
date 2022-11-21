@@ -27,6 +27,10 @@ const BitcoinPage = () => {
       onCommand: ({ command, url }) => {
         if (command === 'pricePeriod') {
           processData(url)
+        } else if (command === 'news') {
+          window.open('./alannews')
+        } else if (command === 'contact') {
+          window.open('./contact')
         }
       },
     })
@@ -100,7 +104,7 @@ const BitcoinPage = () => {
               <LineChart
                 data={dataValues.data}
                 // onChartHover={(a, b) => console.log(a + ' , ' + b)}
-                onChartHover={(a, b) => setValues(a, b)}
+                // onChartHover={(a, b) => setValues(a, b)}
               />
             ) : null}
           </div>

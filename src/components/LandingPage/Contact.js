@@ -16,7 +16,6 @@ const Contact = () => {
   const [message, setMessage] = useState('')
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
     db.collection('contact-data')
       .add({
         id: uuid(),

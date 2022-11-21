@@ -6,12 +6,14 @@ import useStyles from './styles.js'
 import NewsLogo from './Images/NewsLogo.png'
 import wordsToNumbers from 'words-to-numbers'
 import NavBar from './components/LandingPage/NavBar'
+import { useNavigate, Link } from 'react-router-dom'
 
 const alanKey =
   'c4db81d3452c51abf7f3b28e2026db8c2e956eca572e1d8b807a3e2338fdd0dc/stage'
 
 const AlanNews = () => {
   const classes = useStyles()
+  const navigate = useNavigate()
 
   const [newsArticles, setNewsArticles] = useState([])
   const [activeArticle, setActiveArticle] = useState(-1)
@@ -40,6 +42,10 @@ const AlanNews = () => {
           }
 
           window.open(articles[number].url, '_blank')
+        } else if (command === 'bitcoin') {
+          window.open('./bitcoindata')
+        } else if (command === 'contact') {
+          window.open('./contact')
         }
       },
     })
